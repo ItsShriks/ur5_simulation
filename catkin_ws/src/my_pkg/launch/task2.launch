@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- Associate to the robot description parameter, the urdf file that model the robot-->
+    <param name="robot_description" command = "$(find xacro)/xacro --inorder $(find my_pkg)/urdf/ur5.xacro" />
+
+    <!-- Read the joint value-->
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    
+    <!-- Visualization in Rviz-->
+    <!--<node name="rviz" pkg="rviz" type="rviz" />-->
+    <node name="rviz" pkg="rviz" type="rviz" args= "-d $(find my_pkg)/config/config.rviz" />
+    <node pkg="my_pkg" type="motion_publisher.py" name="motion_publisher" output="screen">
+    </node>
+
+    <!-- Visualization of the use_gui for playing with joint-->
+    <arg name="use_gui" default="true" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"  output="screen" unless="$(arg use_gui)" />
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"  output="screen" if="$(arg use_gui)"/>    
+    
+
+</launch>
+    <!-- Launch the UR5 simulation in Gazebo -->
+    <!-- <include file="$(find ur_gazebo)/launch/ur5.launch" /> -->
