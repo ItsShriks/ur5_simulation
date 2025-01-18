@@ -1,11 +1,13 @@
 # ur5_simulation
 
-# The Task
- 
-Simulate a UR5 robot on ROS -Gazebo
-
-# Task 1 🟢
-1) Set up a simulation environment for a UR5 robot using Gazebo use an open source example for the usage of ROS and [Gazebo](https://github.com/ros-industrial/universal_robot [ROS-Industrial Universal Robots](http://wiki.ros.org/universal_robot) 
+# Prerequisites
+```
+sudo apt-get install ros-noetic-universal-robots
+sudo apt install ros-noetic-moveit
+sudo apt-get install libkdl-parser-dev
+```
+ # Task 1 🟢
+Set up a simulation environment for a UR5 robot using Gazebo use an open source example for the usage of ROS and [Gazebo](https://github.com/ros-industrial/universal_robot [ROS-Industrial Universal Robots](http://wiki.ros.org/universal_robot) 
 Write a custom ROS node to publish desired joint angles to the UR5 robot in Gazebo publish joint angles as function of sine waves on all of the joints write a launch file which starts all nodes and visualizes the results of this task
 # Task 2 🟢
 Write a library which generates 2 kinds of motion.

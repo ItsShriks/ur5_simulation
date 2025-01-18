@@ -45,8 +45,8 @@
         <arg name="publish_monitored_planning_scene" value="true" />
     </include>
 
-    <include file= "$(find moveit_config)/launch/moveit_rviz.launch" >
+    <!-- <include file= "$(find moveit_config)/launch/moveit_rviz.launch" >
         <arg name="rviz_config" value="$(find moveit_config)/launch/moveit.rviz" />
-    </include>
+    </include> -->
 
 </launch>
