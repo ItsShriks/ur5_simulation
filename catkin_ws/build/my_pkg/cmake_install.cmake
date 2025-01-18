@@ -1,8 +1,8 @@
-# Install script for directory: /home/shrikar/neura_test/catkin_ws/src/my_pkg
+# Install script for directory: /home/shrikar/ur5_simulation/catkin_ws/src/my_pkg
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/shrikar/neura_test/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/shrikar/ur5_simulation/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/shrikar/neura_test/catkin_ws/build/my_pkg/catkin_generated/installspace/my_pkg.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/shrikar/ur5_simulation/catkin_ws/build/my_pkg/catkin_generated/installspace/my_pkg.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_pkg/cmake" TYPE FILE FILES
-    "/home/shrikar/neura_test/catkin_ws/build/my_pkg/catkin_generated/installspace/my_pkgConfig.cmake"
-    "/home/shrikar/neura_test/catkin_ws/build/my_pkg/catkin_generated/installspace/my_pkgConfig-version.cmake"
+    "/home/shrikar/ur5_simulation/catkin_ws/build/my_pkg/catkin_generated/installspace/my_pkgConfig.cmake"
+    "/home/shrikar/ur5_simulation/catkin_ws/build/my_pkg/catkin_generated/installspace/my_pkgConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_pkg" TYPE FILE FILES "/home/shrikar/neura_test/catkin_ws/src/my_pkg/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_pkg" TYPE FILE FILES "/home/shrikar/ur5_simulation/catkin_ws/src/my_pkg/package.xml")
 endif()
 

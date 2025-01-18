@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/shrikar/neura_test/catkin_ws/build'
+export CMAKE_PREFIX_PATH="/home/shrikar/ur5_simulation/catkin_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD='/home/shrikar/ur5_simulation/catkin_ws/build'
+export ROSLISP_PACKAGE_DIRECTORIES='/home/shrikar/ur5_simulation/catkin_ws/devel/share/common-lisp'
+export ROS_PACKAGE_PATH="/home/shrikar/ur5_simulation/catkin_ws/src:$ROS_PACKAGE_PATH"

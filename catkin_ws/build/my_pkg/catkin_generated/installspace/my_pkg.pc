@@ -1,4 +1,4 @@
-prefix=/home/shrikar/neura_test/catkin_ws/install
+prefix=/home/shrikar/ur5_simulation/catkin_ws/install
 
 Name: my_pkg
 Description: Description of my_pkg

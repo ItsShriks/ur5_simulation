@@ -1,2 +1,2 @@
 moveit_config:my_pkg
--DCATKIN_DEVEL_PREFIX=/home/shrikar/neura_test/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/shrikar/neura_test/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/shrikar/ur5_simulation/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/shrikar/ur5_simulation/catkin_ws/install -G Unix Makefiles

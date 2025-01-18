@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/shrikar/neura_test/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/shrikar/ur5_simulation/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/shrikar/neura_test/catkin_ws/build
+CMAKE_BINARY_DIR = /home/shrikar/ur5_simulation/catkin_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empty_
 .PHONY : moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/shrikar/neura_test/catkin_ws/build/moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/shrikar/ur5_simulation/catkin_ws/build/moveit_config && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/shrikar/neura_test/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shrikar/neura_test/catkin_ws/src /home/shrikar/neura_test/catkin_ws/src/moveit_config /home/shrikar/neura_test/catkin_ws/build /home/shrikar/neura_test/catkin_ws/build/moveit_config /home/shrikar/neura_test/catkin_ws/build/moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shrikar/ur5_simulation/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shrikar/ur5_simulation/catkin_ws/src /home/shrikar/ur5_simulation/catkin_ws/src/moveit_config /home/shrikar/ur5_simulation/catkin_ws/build /home/shrikar/ur5_simulation/catkin_ws/build/moveit_config /home/shrikar/ur5_simulation/catkin_ws/build/moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

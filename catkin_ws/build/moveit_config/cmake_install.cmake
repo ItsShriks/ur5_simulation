@@ -1,8 +1,8 @@
-# Install script for directory: /home/shrikar/neura_test/catkin_ws/src/moveit_config
+# Install script for directory: /home/shrikar/ur5_simulation/catkin_ws/src/moveit_config
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/shrikar/neura_test/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/shrikar/ur5_simulation/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/shrikar/neura_test/catkin_ws/build/moveit_config/catkin_generated/installspace/moveit_config.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/shrikar/ur5_simulation/catkin_ws/build/moveit_config/catkin_generated/installspace/moveit_config.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config/cmake" TYPE FILE FILES
-    "/home/shrikar/neura_test/catkin_ws/build/moveit_config/catkin_generated/installspace/moveit_configConfig.cmake"
-    "/home/shrikar/neura_test/catkin_ws/build/moveit_config/catkin_generated/installspace/moveit_configConfig-version.cmake"
+    "/home/shrikar/ur5_simulation/catkin_ws/build/moveit_config/catkin_generated/installspace/moveit_configConfig.cmake"
+    "/home/shrikar/ur5_simulation/catkin_ws/build/moveit_config/catkin_generated/installspace/moveit_configConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config" TYPE FILE FILES "/home/shrikar/neura_test/catkin_ws/src/moveit_config/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config" TYPE FILE FILES "/home/shrikar/ur5_simulation/catkin_ws/src/moveit_config/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config" TYPE DIRECTORY FILES "/home/shrikar/neura_test/catkin_ws/src/moveit_config/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config" TYPE DIRECTORY FILES "/home/shrikar/ur5_simulation/catkin_ws/src/moveit_config/launch" REGEX "/setup\\_assistant\\.launch$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config" TYPE DIRECTORY FILES "/home/shrikar/neura_test/catkin_ws/src/moveit_config/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/moveit_config" TYPE DIRECTORY FILES "/home/shrikar/ur5_simulation/catkin_ws/src/moveit_config/config")
 endif()
 
