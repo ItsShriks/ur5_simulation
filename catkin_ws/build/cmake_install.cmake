@@ -131,6 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/shrikar/neura_test/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/shrikar/neura_test/catkin_ws/build/moveit_config/cmake_install.cmake")
   include("/home/shrikar/neura_test/catkin_ws/build/universal_robot/universal_robots/cmake_install.cmake")
   include("/home/shrikar/neura_test/catkin_ws/build/my_pkg/cmake_install.cmake")
   include("/home/shrikar/neura_test/catkin_ws/build/universal_robot/ur10_moveit_config/cmake_install.cmake")

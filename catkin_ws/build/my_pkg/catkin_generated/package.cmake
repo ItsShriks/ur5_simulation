@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "my_pkg")
 set(my_pkg_VERSION "0.0.0")
-set(my_pkg_MAINTAINER "shrikar <shrikar@todo.todo>")
+set(my_pkg_MAINTAINER "shrikar <nakhyeshrikar@icloud.com>")
 set(my_pkg_PACKAGE_FORMAT "2")
 set(my_pkg_BUILD_DEPENDS "roscpp" "rospy" "std_msgs")
 set(my_pkg_BUILD_EXPORT_DEPENDS "roscpp" "rospy" "std_msgs")

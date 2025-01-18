@@ -5,6 +5,7 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
+subdirs("moveit_config")
 subdirs("universal_robot/universal_robots")
 subdirs("my_pkg")
 subdirs("universal_robot/ur10_moveit_config")

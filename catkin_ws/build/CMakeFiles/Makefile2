@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/shrikar/neura_test/catkin_ws/build
 
 # The main recursive "all" target.
 all: gtest/all
+all: moveit_config/all
 all: universal_robot/universal_robots/all
 all: my_pkg/all
 all: universal_robot/ur10_moveit_config/all
@@ -73,6 +74,7 @@ all: universal_robot/ur_kinematics/all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
+preinstall: moveit_config/preinstall
 preinstall: universal_robot/universal_robots/preinstall
 preinstall: my_pkg/preinstall
 preinstall: universal_robot/ur10_moveit_config/preinstall
@@ -97,6 +99,7 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
+clean: moveit_config/clean
 clean: universal_robot/universal_robots/clean
 clean: my_pkg/clean
 clean: universal_robot/ur10_moveit_config/clean
@@ -172,6 +175,24 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googletest/clean
 
 #=============================================================================
+# Directory level rules for directory moveit_config
+
+# Recursive "all" directory target.
+moveit_config/all:
+
+.PHONY : moveit_config/all
+
+# Recursive "preinstall" directory target.
+moveit_config/preinstall:
+
+.PHONY : moveit_config/preinstall
+
+# Recursive "clean" directory target.
+moveit_config/clean: moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean
+
+.PHONY : moveit_config/clean
+
+#=============================================================================
 # Directory level rules for directory my_pkg
 
 # Recursive "all" directory target.
@@ -217,7 +238,7 @@ universal_robot/universal_robots/preinstall:
 .PHONY : universal_robot/universal_robots/preinstall
 
 # Recursive "clean" directory target.
-universal_robot/universal_robots/clean: universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/clean
+universal_robot/universal_robots/clean:
 
 .PHONY : universal_robot/universal_robots/clean
 
@@ -891,31 +912,31 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target moveit_config/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/build.make universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/build.make universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/build
+moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build.make moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build.make moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shrikar/neura_test/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/all
+.PHONY : moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shrikar/neura_test/catkin_ws/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shrikar/neura_test/catkin_ws/build/CMakeFiles 0
-.PHONY : universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/rule
+_catkin_empty_exported_target: moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 .PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/build.make universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/clean
+moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build.make moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Target rules for target my_pkg/CMakeFiles/std_msgs_generate_messages_py.dir

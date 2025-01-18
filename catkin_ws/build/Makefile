@@ -294,7 +294,7 @@ _catkin_empty_exported_target: cmake_check_build_system
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	$(MAKE) -f universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/build.make universal_robot/universal_robots/CMakeFiles/_catkin_empty_exported_target.dir/build
+	$(MAKE) -f moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build.make moveit_config/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
