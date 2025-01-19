@@ -16,11 +16,11 @@ The second motion is a linear motion between 2 poses in cartesian space. This mo
 Publish the output of the motions to your Gazebo node from task 1
 Write a launch file which starts all nodes and visualizes the results of this task.
  
-# Task 3 🟡
+# Task 3 🟢
 Provide user API for your motion-library in Python: which should have ability to:
 - Read robot state
 - Move the robot with joint/linear primitive from task 2
  
-# Task 4 🔴
+# Task 4 🟡
 Propose solution to use LLM for code suggestion with API provided in task 3 using open-sources LLM models.
 Code a simple interface of such the co-pilot.

@@ -9,16 +9,6 @@
     <arg name="x" default="0" />
     <arg name="y" default="0" />
     <arg name="z" default="0" />
-
-    <include file = "$(find gazebo_ros)/launch/empty_world.launch" >
-        <arg name="use_sim_time" value="true"/>
-        <arg name="debug" value="false"/>
-        <arg name="gui" value="true"/>
-        <arg name="paused" value="true" />
-        <!--<arg name="world_name" value="$(arg world_file)"/>-->
-    </include>   
-    <node name="spawn_the_robot" pkg="gazebo_ros" type="spawn_model"  output="screen" args="-urdf -param robot_description -model ur5 -x $(arg x) -y $(arg y) -z $(arg z)" />
-    
     <rosparam command="load" file="$(find my_pkg)/config/ur5_controller.yaml"/>
 
     <node name="controller_spawner" pkg="controller_manager" type="spawner"  
@@ -45,7 +35,23 @@
         <arg name="publish_monitored_planning_scene" value="true" />
     </include>
 
+    <include file = "$(find gazebo_ros)/launch/empty_world.launch" >
+        <arg name="use_sim_time" value="true"/>
+        <arg name="debug" value="false"/>
+        <arg name="gui" value="true"/>
+        <arg name="paused" value="false" />
+        <!--<arg name="world_name" value="$(arg world_file)"/>-->
+    </include>   
+    <node name="spawn_the_robot" pkg="gazebo_ros" type="spawn_model"  output="screen" args="-urdf -param robot_description -model ur5 -x $(arg x) -y $(arg y) -z $(arg z)" />
+    
+
     <include file= "$(find moveit_config)/launch/moveit_rviz.launch" >
         <arg name="rviz_config" value="$(find moveit_config)/launch/moveit.rviz" />
     </include>
+
+    <node pkg="tf" type="tf_echo" name="tf_echo" output="screen" args="/base_link /tool0" />
+
+    <node name="test_api_node" pkg="my_pkg" type="test_api.py" output="screen"/>
+
+
 </launch>
