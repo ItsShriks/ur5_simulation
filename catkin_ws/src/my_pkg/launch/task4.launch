@@ -1,19 +1,11 @@
-<?xml version="1.0"?>
 <launch>
-    <!-- Associate to the robot description parameter, the urdf file that model the robot-->
     <param name="robot_description" command = "$(find xacro)/xacro --inorder $(find my_pkg)/urdf/ur5.xacro" />
-    <!-- Read the joint value-->
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-
+    
     <!-- Set teh position in empty world-->
     <arg name="x" default="0" />
     <arg name="y" default="0" />
     <arg name="z" default="0" />
     <rosparam command="load" file="$(find my_pkg)/config/ur5_controller.yaml"/>
-<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-    <param name="use_gui" value="false"/>
-    <param name="rate" value="50"/>
-</node>
 
     <node name="controller_spawner" pkg="controller_manager" type="spawner"  
             output="screen" respawn="false" ns="/ur5"
@@ -21,15 +13,21 @@
                 eff_joint_traj_controller
                 --timeout 60 ">        
     </node>
-    <!-- Visualization in Rviz-->
-    <!--<node name="rviz" pkg="rviz" type="rviz" />-->
-    <node name="rviz" pkg="rviz" type="rviz" args= "-d $(find my_pkg)/config/config.rviz" />
-    <node pkg="my_pkg" type="joint_publisher.py" name="sine_wave_joint_publisher" output="screen">
-        <!-- Parameters for sine wave -->
-        <param name="amplitude" value="1.0" />
-        <param name="frequency" value="0.5" />
-    </node>
 
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  
+            output="screen" respawn="false">
+            <remap from="/joint_states" to="/ur5/joint_states"/>
+        
+    </node>
+    
+  <!-- Launch MoveIt! (or other necessary nodes) -->
+    <include file= "$(find moveit_config)/launch/planning_context.launch" >
+        <arg name="load_robot_description" value="false" />
+    </include>
+
+    <include file= "$(find moveit_config)/launch/move_group.launch" >
+        <arg name="publish_monitored_planning_scene" value="true" />
+    </include>
     <include file = "$(find gazebo_ros)/launch/empty_world.launch" >
         <arg name="use_sim_time" value="true"/>
         <arg name="debug" value="false"/>
@@ -40,5 +38,12 @@
     <node name="spawn_the_robot" pkg="gazebo_ros" type="spawn_model"  output="screen" args="-urdf -param robot_description -model ur5 -x $(arg x) -y $(arg y) -z $(arg z)" />
     
 
+    <include file= "$(find moveit_config)/launch/moveit_rviz.launch" >
+        <arg name="rviz_config" value="$(find moveit_config)/launch/moveit.rviz" />
+    </include>
+
+  <!-- Run the test_api.py script as a node -->
+    <node name="test_api_node" pkg="my_pkg" type="test_api_suggestor.py" output="screen">
+        <param name="some_param" value="param_value" />
+    </node>
 </launch>
-    
