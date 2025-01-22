@@ -13,7 +13,7 @@ openai.api_key = "api_key"
 
 
 # Directory containing Python code
-CODE_DIRECTORY = "/home/shrikar/ur5_simulation/catkin_ws/src/my_pkg"
+CODE_DIRECTORY = "/catkin_ws/src/my_pkg"
 
 # Function to read all Python files
 def read_python_files(directory):
