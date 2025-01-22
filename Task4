@@ -1,1 +1,1 @@
-xdg-open catkin_ws/src/web/index.html && python3 catkin_ws/src/server/server.py
+cd catkin_ws && catkin_make --pkg my_pkg moveit_config && source devel/setup.bash && python3 src/my_pkg/scripts/run_motion_control.py && roslaunch my_pkg task3.launch

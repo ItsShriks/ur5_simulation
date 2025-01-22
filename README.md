@@ -39,9 +39,7 @@ Code a simple interface of such the co-pilot.
 ```
 bash Task4
 ```
-Note:
-The API Key has been removed from the GitHub as it is restricted. You will need to paste your own API Key to run this Task.
+Open New Terminal
 ```
-ur5_simulation/catkin_ws/src/server/server.py Line 12
+python3 /catkin_ws/src/my_pkg/scripts/run_motion_control.py
 ```
-Also Check Line 16 for the Relative Path to the code
