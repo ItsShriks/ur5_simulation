@@ -1,0 +1,1 @@
+cd catkin_ws && catkin_make --pkg my_pkg moveit_config && source devel/setup.bash && roslaunch my_pkg task2_2.launch 

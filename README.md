@@ -21,6 +21,8 @@ Publish the output of the motions to your Gazebo node from task 1
 Write a launch file which starts all nodes and visualizes the results of this task.
 ```
 bash Task2
+bash Task2_2
+
 ```
 
 # Task 3 🟢

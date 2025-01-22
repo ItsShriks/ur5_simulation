@@ -17,15 +17,16 @@
                 eff_joint_traj_controller
                 --timeout 60 ">        
     </node>
+    
 
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"  
             output="screen" respawn="false">
-            <!-- <remap from="/joint_states" to="/ur5/joint_states"/> -->
+            <remap from="/joint_states" to="/ur5/joint_states"/>
         
     </node>
 
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
-    <!-- <remap from="/joint_states" to="/ur5/joint_states"/> -->
+    <remap from="/joint_states" to="/ur5/joint_states"/>
 
     <include file= "$(find moveit_config)/launch/planning_context.launch" >
         <arg name="load_robot_description" value="false" />
@@ -44,6 +45,12 @@
     </include>   
     <node name="spawn_the_robot" pkg="gazebo_ros" type="spawn_model"  output="screen" args="-urdf -param robot_description -model ur5 -x $(arg x) -y $(arg y) -z $(arg z)" />
     
+
+    <!-- <include file= "$(find moveit_config)/launch/moveit_rviz.launch" >
+        <arg name="rviz_config" value="$(find moveit_config)/launch/moveit.rviz" />
+    </include> -->
+
     <node pkg="tf" type="tf_echo" name="tf_echo" output="screen" args="/base_link /tool0" />
-    <node name="motion_publisher" pkg="my_pkg" type="motion_publisher.py" output="screen" />
+    <node name="ur5_ik" pkg="my_pkg" type="ur5_ik" output="screen"/>
+
 </launch>
