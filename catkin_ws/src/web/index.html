@@ -1,0 +1,54 @@
+<body>
+    <h1>Custom Copilot</h1>
+    <button onclick="loadFiles()">Load Files</button>
+    <select id="fileSelect"></select>
+    <br><br>
+    <select id="taskSelect">
+        <option value="Suggest improvements">Suggest improvements</option>
+        <option value="Debug the code">Debug the code</option>
+        <option value="Generate documentation">Generate documentation</option>
+    </select>
+    <br><br>
+    <button onclick="processFile()">Process Selected File</button>
+    <div id="output"></div>
+
+    <script>
+        async function loadFiles() {
+            const response = await fetch("http://127.0.0.1:5000/list_files");
+            const result = await response.json();
+            const fileSelect = document.getElementById("fileSelect");
+            fileSelect.innerHTML = ""; // Clear existing options
+
+            if (result.success) {
+                result.files.forEach(file => {
+                    const option = document.createElement("option");
+                    option.value = file;
+                    option.textContent = file;
+                    fileSelect.appendChild(option);
+                });
+            } else {
+                alert("Error loading files: " + result.error);
+            }
+        }
+
+        async function processFile() {
+            const fileName = document.getElementById("fileSelect").value;
+            const task = document.getElementById("taskSelect").value;
+
+            const response = await fetch("http://127.0.0.1:5000/process_file", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ file_name: fileName, task })
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                document.getElementById("output").innerText = result.result;
+            } else {
+                document.getElementById("output").innerText = `Error: ${result.error}`;
+            }
+        }
+    </script>
+</body>

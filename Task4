@@ -1,1 +1,1 @@
-python3 CoPilot/backend/app.py && 
+xdg-open catkin_ws/src/web/index.html && python3 catkin_ws/src/server/server.py
