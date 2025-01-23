@@ -1,5 +1,12 @@
 # ur5_simulation
 
+# Tested on
+- OS: Ubuntu 20.04
+- ROS Distribution: Noetic
+- Processor: i5-4210M CPU @ 2.60GH
+- GPU: NVIDIA GeForce GTX 860M
+- CUDA: 12.2
+ 
 # Prerequisites
 ```
 sudo apt-get install ros-noetic-universal-robots
@@ -22,7 +29,6 @@ Write a launch file which starts all nodes and visualizes the results of this ta
 ```
 bash Task2
 bash Task2_2
-
 ```
 
 # Task 3 🟢
@@ -43,3 +49,11 @@ Open New Terminal
 ```
 python3 /catkin_ws/src/my_pkg/scripts/run_motion_control.py
 ```
+
+The Task 4 is designed for lightweight operation and uses a simplified LLM model for better performance on resource-constrained systems.
+
+# Acknowledgments
+- [ROS-Industrial Universal Robots](http://wiki.ros.org/universal_robot)
+- [MoveIt for Motion Planning](https://moveit.ai)
+- [Hugging FaceTransformers](https://huggingface.com)
+- [Neura Robotics](https://neura-robotics.com)
